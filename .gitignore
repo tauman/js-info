@@ -1,0 +1,26 @@
+# package directories
+node_modules
+jspm_packages
+
+# Serverless directories
+.serverless
+
+.DS_Store
+
+# tmp directory for
+tmp
+
+# build directory
+build
+
+# directory for scratch code
+scratch-code
+
+# test coverage cache
+.nyc_output
+
+# test coverage output directory
+coverage
+
+# Visual Studio Code directory
+.vscode

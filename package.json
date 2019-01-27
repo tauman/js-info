@@ -1,0 +1,43 @@
+{
+  "name": "js-intro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test:exercise": "npx mocha src/**/exercise-spec.js --recursive --exit",
+    "test:exercise:debug": "colorize=on logLevel=debug npx mocha src/**/exercise-spec.js --recursive --exit",
+    "test:demo": "npx mocha src/**/tests-demo-spec.js",
+    "coverage": "npx nyc --reporter=text mocha test/unit --recursive --exit",
+    "lint": "npx eslint --ignore-pattern scratch-code .",
+    "eslint": "npm run lint",
+    "lint:fix": "npx eslint --ignore-pattern scratch-code . --fix ."
+  },
+  "keywords": [],
+  "author": "Steven Reich",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.267.1",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "request": "^2.88.0",
+    "serverless-offline": "^3.32.2",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "aws-sdk-mock": "^4.0.0",
+    "chai": "^4.1.2",
+    "chai-as-promised": "^7.1.1",
+    "eslint": "^4.19.1",
+    "mocha": "^5.2.0",
+    "nock": "^9.3.0",
+    "nyc": "^12.0.2",
+    "rewire": "^4.0.1",
+    "sinon": "^5.0.10",
+    "sinon-chai": "^3.1.0"
+  },
+  "nyc": {
+    "include": "src",
+    "exclude": "**/logger.js"
+  }
+}
